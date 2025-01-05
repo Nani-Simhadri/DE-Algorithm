@@ -24,7 +24,7 @@ The basic implementation of the DE algorithm available in the Python SciPy libra
 
 [9] DE algorithm implementation of SciPy library - https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.differential_evolution.html
 
-DE for Solution of DTL Optimization :
+DE for Solution of duty-ratio based thermistor linearizer (DTL) Optimization :
 
 The optimization problem in \eqref{eq:optimizationproblem} is a non-linear function with possibly multiple minima. This problem requires the use of evolutionary methods [10], [6] to locate the global optimum. We propose the use of the DE [1] as the optimization method to minimize $\%NL$ subject to constraints $\vert{m}\vert$ and $V_{L} \leq V_{theta} \leq V_{H}$.
 
