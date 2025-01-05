@@ -26,7 +26,7 @@ The basic implementation of the DE algorithm available in the Python SciPy libra
 
 DE for Solution of duty-ratio based thermistor linearizer (DTL) Optimization :
 
-The optimization problem is a non-linear function with possibly multiple minima. This problem requires the use of evolutionary methods [10], [6] to locate the global optimum. We propose the use of the DE [1] as the optimization method to minimize $%NL$ subject to constraints $\vert{m}\vert$ and $V_{L} \leq V_{theta} \leq V_{H}$.
+The optimization problem is a non-linear function with possibly multiple minima. This problem requires the use of evolutionary methods [10], [6] to locate the global optimum. We propose the use of the DE [1] as the optimization method to minimize \%NL subject to constraints $\vert{m}\vert$ and $V_{L} \leq V_{theta} \leq V_{H}$.
 
 [10] E. K, B. A. Sontakke and A. Chandrika Sreekantan, "Design, Analysis, and Hardware Verification of a Linearized Thermistor-Based Temperature Measurement System," in IEEE Transactions on Instrumentation and Measurement, vol. 71, pp. 1-9, 2022, Art no. 2002709, doi: 10.1109/TIM.2022.3167787.
 
