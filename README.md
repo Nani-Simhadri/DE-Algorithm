@@ -39,11 +39,10 @@ where, $i$ stands for the index in the population, $i=1,\ldots,PS$, $D$ is the d
 
 The process of the DE algorithm is as follows:
 
-1. Mutation: In mutation phase, for each decision variable vector, $x^{g}[i]$, the DE algorithm creates the donor vector, $V^{g+1}[i]$, according to the equation given below
-$V^{g+1}[i]$ = $x^{g}[p_1]$ + $F_{m}(x^{g}[p_2] - x^{g}[p_3])$
-
-For this purpose, three other decision variable vectors: $x^{g}[p_1]$, $x^{g}[p_2]$, and $x^{g}[p_3]$, where the indices $p_1$, $p_2$, and $p_3$ are randomly selected and $i$, $p_1$, $p_2$, and $p_3$ are distinct, are used.
+1. Mutation: In mutation phase, for each decision variable vector, $x^{g}[i]$, the DE algorithm creates the donor vector, $V^{g+1}[i]$, according to the equation
+$V^{g+1}[i]$ = $x^{g}[p_1]$ + $F_{m}(x^{g}[p_2] - x^{g}[p_3])$.
+   For this purpose, three other decision variable vectors: $x^{g}[p_1]$, $x^{g}[p_2]$, and $x^{g}[p_3]$, where the indices $p_1$, $p_2$, and $p_3$ are randomly selected and $i$, $p_1$,     $p_2$, and $p_3$ are distinct, are used.
 2. Recombination: Here, the trial vector, $U^{g+1}[i]$, is generated using the decision variable vector, $x^{g}[i]$ and the donor vector, $V^{g+1}[i]$.
-$U^{g+1}_{j}[i]$
-$U^{g+1}_{j}[i]$ = $x^{g}_{j}[i]$ ; otherwise,
+$U^{g+1}_{j}[i]$ = $U^{g+1}_{j}[i]$ 
+
 where $rand_{j,i}$ is an independent sample from a uniformly distributed random value in the range [0, 1], $j=1,\ldots,D$, and $I_{rand}$ is an integer selected uniformly at random from $[1,\ldots,D]$.
