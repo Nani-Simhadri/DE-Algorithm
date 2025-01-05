@@ -43,5 +43,6 @@ The process of the DE algorithm is as follows:
 $V^{g+1}[i]$ = $x^{g}[p_1]$ + $F_m$$(x^{g}[p_2] - x^{g}[p_3])$
 For this purpose, three other decision variable vectors: $x^{g}[p_1]$, $x^{g}[p_2]$, and $x^{g}[p_3]$, where the indices $p_1$, $p_2$, and $p_3$ are randomly selected and $i$, $p_1$, $p_2$, and $p_3$ are distinct, are used.
 2. Recombination: Here, the trial vector, $U^{g+1}[i]$, is generated using the decision variable vector, $x^{g}[i]$ and the donor vector, $V^{g+1}[i]$.
-
+$U^{g+1}_{j}[i]$ = $V^{g+1}_{j}[i]$ ; if $rand_{j,i} \leq CR \text{ or } j = I_{rand}$
+$U^{g+1}_{j}[i]$ = $x^{g}_{j}[i]$ ; otherwise,
 where $rand_{j,i}$ is an independent sample from a uniformly distributed random value in the range [0, 1], $j=1,\ldots,D$, and $I_{rand}$ is an integer selected uniformly at random from $[1,\ldots,D]$.
