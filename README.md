@@ -1,4 +1,4 @@
-The Differential Evolution (DE) Algorithm is a population-based optimization algorithm [1] used to optimize non-linear and real-valued continuous space functions. The DE algorithm involves the use of three processes known as mutation, crossover, and selection to optimize the functions. The DE algorithm has three parameters, which are population size (denoted as NP), mutation factor (denoted as F), and crossover probability (denoted as CR).
+The Differential Evolution (DE) Algorithm is a population-based optimization algorithm [1] used to optimize non-linear and real-valued continuous space functions. The DE algorithm involves the use of three processes known as mutation, crossover, and selection to optimize the functions. The DE algorithm has three parameters, which are population size (denoted as $PS$), mutation factor (denoted as $F_m$), and crossover probability (denoted as $CP$).
 
 [1] R. Storn, K. Price, “Differential Evolution – A Simple and Efficient Heuristic for global Optimization over Continuous Spaces,” J Glob. Optim., vol. 11, no. 4. Springer Science and Business Media LLC, pp. 341–359, 1997.
 
