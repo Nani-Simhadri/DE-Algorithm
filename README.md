@@ -26,7 +26,7 @@ The basic implementation of the DE algorithm available in the Python SciPy libra
 
 DE for Solution of duty-ratio based thermistor linearizer (DTL) Optimization :
 
-The optimization problem in \eqref{eq:optimizationproblem} is a non-linear function with possibly multiple minima. This problem requires the use of evolutionary methods [10], [6] to locate the global optimum. We propose the use of the DE [1] as the optimization method to minimize $\%NL$ subject to constraints $\vert{m}\vert$ and $V_{L} \leq V_{theta} \leq V_{H}$.
+The optimization problem is a non-linear function with possibly multiple minima. This problem requires the use of evolutionary methods [10], [6] to locate the global optimum. We propose the use of the DE [1] as the optimization method to minimize $\%NL$ subject to constraints $\vert{m}\vert$ and $V_{L} \leq V_{theta} \leq V_{H}$.
 
 [10] E. K, B. A. Sontakke and A. Chandrika Sreekantan, "Design, Analysis, and Hardware Verification of a Linearized Thermistor-Based Temperature Measurement System," in IEEE Transactions on Instrumentation and Measurement, vol. 71, pp. 1-9, 2022, Art no. 2002709, doi: 10.1109/TIM.2022.3167787.
               
@@ -60,6 +60,8 @@ DE optimizes an objective function by maintaining a population of decision varia
 
 Consider that $NL(x)$ represents the objective function (\%NL), where $x$ stands for the decision variable vector. In our case, $x\in[G, d, R_1, R_2]$. Note that $G$ is included in the vector, though it does not directly affect the \%NL of $V_{\theta}$. However, inclusion of $G$ enables us to obtain the minimum gain needed to meet the $S_L$ condition, while satisfying other constraints. As a first step for minimizing $NL$, an initial population, with $PS$ number of $x$, is randomly and uniformly selected within the lower and upper bounds of $x$.
 
+Objective Function:
+
 \%NL = $\left( \frac{\max_{k}(\vert{V_{\theta{k}}- (m\theta_{k} + c)}\vert)}{V_{\theta1}-V_{\theta{N}}}\right)\times 100\%$
 
 The decision-variable vectors have the form: $x^{g}[i]$ = $[x^{g}_{1}[i], \ldots, x^{g}_{D}[i]]$,
@@ -77,4 +79,4 @@ where $rand_{j,i}$ is an independent sample from a uniformly distributed random 
 
 3. Selection: In the selection phase, the objective function values of the trial vector and the decision variable vector are compared for population selection to the next generation. The vector with the minimum objective function value is given to the next generation.
 
-The DE algorithm modifies the decision-variable vectors by applying mutation, recombination, and selection phases until the termination criteria are satisfied. The DE algorithm returns the optimal decision variable vector, for which the objective function is minimal, once the termination conditions are satisfied. The termination conditions of the DE algorithm are mentioned in [6]. This algorithm was applied to linearize the characteristics of commercial thermistors, as will be discussed in the following sub-section.
+The DE algorithm modifies the decision-variable vectors by applying mutation, recombination, and selection phases until the termination criteria are satisfied. The DE algorithm returns the optimal decision variable vector, for which the objective function is minimal, once the termination conditions are satisfied. The termination conditions of the DE algorithm are mentioned in [6]. This algorithm was applied to linearize the characteristics of commercial thermistors.
