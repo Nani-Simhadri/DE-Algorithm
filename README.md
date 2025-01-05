@@ -38,6 +38,11 @@ $$
 where, $i$ stands for the index in the population, $i=1,\ldots,PS$, $D$ is the dimension of the decision-variable vector, and $g$ is the generation index.
 
 The process of the DE algorithm is as follows:
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+$$
+x^{g}[i] = [x^{g}_{1}[i], x^{g}_{2}[i], \ldots, x^{g}_{D}[i]],
+$$
 
 1. Mutation: In mutation phase, for each decision variable vector, $x^{g}[i]$, the DE algorithm creates the donor vector, $V^{g+1}[i]$, according to the equation given below
 $V^{g+1}[i]$ = $x^{g}[p_1]$ + $F_m$$(x^{g}[p_2] - x^{g}[p_3])$
