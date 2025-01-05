@@ -36,3 +36,7 @@ The decision-variable vectors have the form: $x^{g}[i]$ = [$x^{g}_{1}[i]$, $x^{g
 where, $i$ stands for the index in the population, $i=1,\ldots,PS$, $D$ is the dimension of the decision-variable vector, and $g$ is the generation index.
 
 The process of the DE algorithm is as follows:
+
+\begin{enumerate}
+    \item \textbf{Mutation:} In mutation phase, for each decision variable vector, $x^{g}[i]$, the DE algorithm creates the donor vector, $V^{g+1}[i]$, according to \eqref{eq:Mutation}. For this purpose, three other decision variable vectors: $x^{g}[p_1]$, $x^{g}[p_2]$, and $x^{g}[p_3]$, where the indices $p_1$, $p_2$, and $p_3$ are randomly selected and $i$, $p_1$, $p_2$, and $p_3$ are distinct, are used. 
+\end{enumerate}
