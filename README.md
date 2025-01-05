@@ -9,10 +9,15 @@ The DE algorithm can also be used to optimize functions with multiple real-value
 The DE algorithm has been used as an optimization technique in the fields of electronics, instrumentation, and measurements, and a list of the research papers that have discussed the use of the DE algorithm is given below.
 
 [3] R. Yang, X. Li, R. Cong and J. Du, "A Novel Cylindricity Measurement Method for Large Workpiece Based on Improved Model and Algorithm, " in IEEE Transactions on Instrumentation and Measurement, vol. 73, pp. 1-11, 2024, Art no. 3000211, doi: 10.1109/TIM.2023.3331408.
+
 [4] Z. Qiu and Y. Zhang, "Three-Dimensional Low-Frequency Earthquake Monitoring Vibration Sensor Based on FBG," in IEEE Transactions on Instrumentation and Measurement, vol. 73, pp. 1-9, 2024, Art no. 9510709, doi: 10.1109/TIM.2024.3406839.
+
 [5] T. Mathew, N. Simhadri, E. K, A. Chandrika Sreekantan and V. B. Sukumaran, "A Digital Thermistor Read-Out Based on Charge-Discharge Topologies Coupled With Optimal Linearization Strategies," in IEEE Sensors Journal, vol. 24, no. 24, pp. 41099-41109, 15 Dec.15, 2024, doi: 10.1109/JSEN.2024.3483906.
+
 [6] N. Simhadri, V. B. S and A. Chandrika Sreekantan, "Resistance Network Synthesis for Analog Thermistor-Linearizer Circuits using Differential Evolution and Graph Laplacian," 2023 16th International Conference on Sensing Technology (ICST), HYDERABAD, India, 2023, pp. 1-6, doi: 10.1109/ICST59744.2023.10460779. 
+
 [7] T. Mathew, S. Nani, A. C. S. and V. B. S., "Studies on Linearizing Direct-Digital Converter Schemes for Thermistors," 2023 IEEE International Instrumentation and Measurement Technology Conference (I2MTC), Kuala Lumpur, Malaysia, 2023, pp. 1-6, doi: 10.1109/I2MTC53148.2023.10176107.
+
 [8] S. Sundararajan, K. N. Madhusoodanan, A. Abudhahir and G. Noble, "Implementation and Analysis of an Evolutionary Optimized Non-Linear Function for Linearization of Thermo-Resistive Sensors," 6th International Conference on Devices, Circuits and Systems (ICDCS), Coimbatore, India, 2022, pp. 74-79, doi: 10.1109/ICDCS54290.2022.9780706.
 
 The basic implementation of the DE algorithm available in the Python SciPy library [] helps to optimize the functions. In addition, it helps in creating the framework without the need for substantial efforts, followed by the choice of fine-tuning and defining the aforementioned three DE parameters (population size, mutation factor, and crossover probability), search space, and linear and non-linear constraints functions as per the user application to solve the optimization problem. 
