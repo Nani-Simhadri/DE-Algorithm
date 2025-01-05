@@ -20,7 +20,7 @@ The DE algorithm has been used as an optimization technique in the fields of ele
 
 [8] S. Sundararajan, K. N. Madhusoodanan, A. Abudhahir and G. Noble, "Implementation and Analysis of an Evolutionary Optimized Non-Linear Function for Linearization of Thermo-Resistive Sensors," 6th International Conference on Devices, Circuits and Systems (ICDCS), Coimbatore, India, 2022, pp. 74-79, doi: 10.1109/ICDCS54290.2022.9780706.
 
-The basic implementation of the DE algorithm available in the Python SciPy library [] helps to optimize the functions. In addition, it helps in creating the framework without the need for substantial efforts, followed by the choice of fine-tuning and defining the aforementioned three DE parameters (population size, mutation factor, and crossover probability), search space, and linear and non-linear constraints functions as per the user application to solve the optimization problem. 
+The basic implementation of the DE algorithm available in the Python SciPy library [9] helps to optimize the functions. In addition, it helps in creating the framework without the need for substantial efforts, followed by the choice of fine-tuning and defining the aforementioned three DE parameters (population size, mutation factor, and crossover probability), search space, and linear and non-linear constraints functions as per the user application to solve the optimization problem. 
 
 [9] DE algorithm implementation of SciPy library - https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.differential_evolution.html
 
@@ -62,9 +62,7 @@ Consider that $NL(x)$ represents the objective function (\%NL), where $x$ stands
 
 \%NL = $\left( \frac{\max_{k}(\vert{V_{\theta{k}}- (m\theta_{k} + c)}\vert)}{V_{\theta1}-V_{\theta{N}}}\right)\times 100\%$
 
-The decision-variable vectors have the form: $$
-x^{g}[i] = [x^{g}_{1}[i], x^{g}_{2}[i], \ldots, x^{g}_{D}[i]],
-$$
+The decision-variable vectors have the form: 
 where, $i$ stands for the index in the population, $i=1,\ldots,PS$, $D$ is the dimension of the decision-variable vector, and $g$ is the generation index.
 
 The process of the DE algorithm is as follows:
