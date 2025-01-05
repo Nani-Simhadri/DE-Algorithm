@@ -48,3 +48,5 @@ $U^{g+1}_{j}[i]$ = $U^{g+1}_{j}[i]$
 where $rand_{j,i}$ is an independent sample from a uniformly distributed random value in the range [0, 1], $j=1,\ldots,D$, and $I_{rand}$ is an integer selected uniformly at random from $[1,\ldots,D]$.
 
 3. Selection: In the selection phase, the objective function values of the trial vector and the decision variable vector are compared for population selection to the next generation. The vector with the minimum objective function value is given to the next generation.
+
+The DE algorithm modifies the decision-variable vectors by applying mutation, recombination, and selection phases until the termination criteria are satisfied. The DE algorithm returns the optimal decision variable vector, for which the objective function is minimal, once the termination conditions are satisfied. The termination conditions of the DE algorithm are mentioned in [6]. This algorithm was applied to linearize the characteristics of commercial thermistors, as will be discussed in the following sub-section.
