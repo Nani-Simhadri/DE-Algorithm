@@ -26,30 +26,33 @@ The basic implementation of the DE algorithm available in the Python SciPy libra
 
 DE for Solution of DTL Optimization :
 
-The optimization problem in \eqref{eq:optimizationproblem} is a non-linear function with possibly multiple minima. This problem requires the use of evolutionary methods [], [] to locate the global optimum. We propose the use of the DE [1] as the optimization method for solving \eqref{eq:optimizationproblem}. DE optimizes an objective function by maintaining a population of decision variable vectors. The value of the objective function for each decision variable vector is used to evolve the population iteratively. As the iteration proceeds, the population contains decision variable vectors with \enquote{better} values for the objective function. The evolution algorithm has three important parameters, namely population size ($PS$), mutation factor ($F_m$), and crossover probability ($CP$). We use the following values: $PS\geq4$, $F_m\in[0,2]$, and $CP\in[0,1]$. The parameters/symbols used in the DE optimization are tabulated and expanded in Table for ease of reference.
+The optimization problem in \eqref{eq:optimizationproblem} is a non-linear function with possibly multiple minima. This problem requires the use of evolutionary methods [], [] to locate the global optimum. We propose the use of the DE [1] as the optimization method for solving \eqref{eq:optimizationproblem}. DE optimizes an objective function by maintaining a population of decision variable vectors. The value of the objective function for each decision variable vector is used to evolve the population iteratively. As the iteration proceeds, the population contains decision variable vectors with \enquote{better} values for the objective function. The evolution algorithm has three important parameters, namely population size ($PS$), mutation factor ($F_m$), and crossover probability ($CP$). We use the following values: $PS\geq4$, $F_m\in[0,2]$, and $CP\in[0,1]$. The parameters/symbols used in the DE optimization are expanded and are given below for ease of reference.
+                                                                                                   
+   a. $PS$                    = Population Size
+                                                                                                  
+   b. $F_m$                   = Mutation Factor
+                                                                                                  
+   c. $CP$                    = Crossover Probability
+                                                                                            
+   d. $g$                     = Generation Index
+                                                                                                 
+   e. $i$                     = Index in the Population Size
+                                                                                   
+   f. $D$                     = Dimension of the Decision Variable Vector
+                                                                        
+   g. $j$                     = Index of the Decision Variables, $1, \ldots, D$
+                                                                  
+   h. $p_1$, $p_2$, and $p_3$ = Random Indexes in the Population different from the running Index $i$
 
-\begin{table}[t]
-\caption{\small List of Parameters used in DE-based DTL optimization}
-\label{table:ParameterSymbols}
-\centering
-\begin{tabular}{|c|c|}
-\hline
-\textbf{Symbol}                  & \textbf{Parameter}                                                                                                        \\ \hline
-$PS$                    & Population Size                                                                                                  \\ \hline
-$F_m$                     & Mutation Factor                                                                                                  \\ \hline
-$CP$                    & Crossover Probability                                                                                            \\ \hline
-$g$                     & Generation Index                                                                                                 \\ \hline
-$i$                     & Index in the Population Size                                                                                     \\ \hline
-$D$                     & Dimension of the Decision Variable Vector                                                                        \\ \hline
-$j$                     & Index of the Decision Variables, $1, \ldots, D$                                                                  \\ \hline
-$p_1$, $p_2$, and $p_3$ & \begin{tabular}[c]{@{}c@{}}Random Indexes in the Population different \\ from the running Index $i$\end{tabular} \\ \hline
-$rand_{j,i}$            & \begin{tabular}[c]{@{}c@{}}Uniformly Distributed Random Value \\ in the range $[1, D]$\end{tabular}              \\ \hline
-$I_{rand}$              & Randomly Selected Integer in the range $[1, D]$                                                                  \\ \hline
-$x^{g}[i]$              & Decision Variable Vector                                                                                                    \\ \hline
-$V^{g+1}[i]$            & Donor Vector                                                                                                     \\ \hline
-$U^{g+1}[i]$            & Trial Vector                                                                                                     \\ \hline
-\end{tabular}
-\end{table}
+   i. $rand_{j,i}$            = Uniformly Distributed Random Value in the range $[1, D]$
+
+   j. $I_{rand}$              = Randomly Selected Integer in the range $[1, D]$
+                                                                  
+   k. $x^{g}[i]$              = Decision Variable Vector
+                                                                                                 
+   l. $V^{g+1}[i]$            = Donor Vector
+                                                                                                    
+   m. $U^{g+1}[i]$            = Trial Vector                                                                                                     
 
 Consider that $NL(x)$ represents the objective function (\%NL), where $x$ stands for the decision variable vector. In our case, $x\in[G, d, R_1, R_2]$. Note that $G$ is included in the vector, though it does not directly affect the \%NL of $V_{\theta}$. However, inclusion of $G$ enables us to obtain the minimum gain needed to meet the $S_L$ condition, while satisfying other constraints. As a first step for minimizing $NL$, an initial population, with $PS$ number of $x$, is randomly and uniformly selected within the lower and upper bounds of $x$.
 
