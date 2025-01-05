@@ -32,7 +32,9 @@ Consider that $NL(x)$ represents the objective function (\%NL), where $x$ stands
 
 \%NL = $\left( \frac{\max_{k}(\vert{V_{\theta{k}}- (m\theta_{k} + c)}\vert)}{V_{\theta1}-V_{\theta{N}}}\right)\times 100\%$
 
-The decision-variable vectors have the form: $x^{g}[i]$ = [$x^{g}_{1}[i]$, $x^{g}_{2}[i]$, $\ldots$, $x^{g}_{D}[i]$]
+The decision-variable vectors have the form: $$
+x^{g}[i] = [x^{g}_{1}[i], x^{g}_{2}[i], \ldots, x^{g}_{D}[i]],
+$$
 where, $i$ stands for the index in the population, $i=1,\ldots,PS$, $D$ is the dimension of the decision-variable vector, and $g$ is the generation index.
 
 The process of the DE algorithm is as follows:
@@ -41,4 +43,5 @@ The process of the DE algorithm is as follows:
 $V^{g+1}[i]$ = $x^{g}[p_1]$ + $F_m$$(x^{g}[p_2] - x^{g}[p_3])$
 For this purpose, three other decision variable vectors: $x^{g}[p_1]$, $x^{g}[p_2]$, and $x^{g}[p_3]$, where the indices $p_1$, $p_2$, and $p_3$ are randomly selected and $i$, $p_1$, $p_2$, and $p_3$ are distinct, are used.
 2. Recombination: Here, the trial vector, $U^{g+1}[i]$, is generated using the decision variable vector, $x^{g}[i]$ and the donor vector, $V^{g+1}[i]$.
+
 where $rand_{j,i}$ is an independent sample from a uniformly distributed random value in the range [0, 1], $j=1,\ldots,D$, and $I_{rand}$ is an integer selected uniformly at random from $[1,\ldots,D]$.
