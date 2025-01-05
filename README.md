@@ -28,7 +28,7 @@ DE for Solution of DTL Optimization :
 
 The optimization problem in \eqref{eq:optimizationproblem} is a non-linear function with possibly multiple minima. This problem requires the use of evolutionary methods [], [] to locate the global optimum. We propose the use of the DE [1] as the optimization method for solving the optimization given below. 
 
-minimization of \%NL subject to constraints $\vert{m}\vert$ and $V_{L} \leq V_{theta} \leq V_{H}
+minimization of \%NL subject to constraints $\vert{m}\vert$ and $V_{L} \leq V_{theta} \leq V_{H}$
               
 
 DE optimizes an objective function by maintaining a population of decision variable vectors. The value of the objective function for each decision variable vector is used to evolve the population iteratively. As the iteration proceeds, the population contains decision variable vectors with \enquote{better} values for the objective function. The evolution algorithm has three important parameters, namely population size ($PS$), mutation factor ($F_m$), and crossover probability ($CP$). We use the following values: $PS\geq4$, $F_m\in[0,2]$, and $CP\in[0,1]$. The parameters/symbols used in the DE optimization are expanded and are given below for ease of reference.
