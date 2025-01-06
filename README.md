@@ -66,7 +66,7 @@ Objective Function:
 
 \%NL = $\left( \frac{\max_{k}(\vert{V_{\theta{k}}- (m\theta_{k} + c)}\vert)}{V_{\theta1}-V_{\theta{N}}}\right)\times 100\%$
 
-The decision-variable vectors have the form: $$x^{g}[i] = [x^{g}_{1}[i], \ldots, x^{g}_{D}[i]]$$,
+The decision-variable vectors have the form: \ $$x^{g}[i] = [x^{g}_{1}[i], \ldots, x^{g}_{D}[i]]$$,
 where, $i$ stands for the index in the population, $i=1,\ldots,PS$, $D$ is the dimension of the decision-variable vector, and $g$ is the generation index.
 
 The process of the DE algorithm is as follows:
