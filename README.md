@@ -87,13 +87,13 @@ The process of the DE algorithm is as follows:
 $V^{g+1}[i]$ = $x^{g}[p_1]$ + $F_{m}(x^{g}[p_2] - x^{g}[p_3])$.
    For this purpose, three other decision variable vectors: $x^{g}[p_1]$, $x^{g}[p_2]$, and $x^{g}[p_3]$, where the indices $p_1$, $p_2$, and $p_3$ are randomly selected and $i$, $p_1$,     $p_2$, and $p_3$ are distinct, are used.
 
-2. Recombination: Here, the trial vector, $U^{g+1}[i]$, is generated using the decision variable vector, $x^{g}[i]$ and the donor vector, $V^{g+1}[i]$.
-
-where $rand_{j,i}$ is an independent sample from a uniformly distributed random value in the range [0, 1], $j=1,\ldots,D$, and $I_{rand}$ is an integer selected uniformly at random from $[1,\ldots,D]$.
+2. Recombination: Here, the trial vector, $U^{g+1}[i]$, is generated using the decision variable vector, $x^{g}[i]$ and the donor vector, $V^{g+1}[i]$ as shown below.
 
 ![RECOM](https://github.com/user-attachments/assets/a0fd8c9e-9f2c-4c33-b1fb-4e9b8720b69f)
 
-3. Selection: In the selection phase, the objective function values of the trial vector and the decision variable vector are compared for population selection to the next generation. The vector with the minimum objective function value is given to the next generation.
+where $rand_{j,i}$ is an independent sample from a uniformly distributed random value in the range [0, 1], $j=1,\ldots,D$, and $I_{rand}$ is an integer selected uniformly at random from $[1,\ldots,D]$.
+
+3. Selection: In the selection phase, the objective function values of the trial vector and the decision variable vector are compared for population selection to the next generation. The vector with the minimum objective function value is given to the next generation as shown below.
 
 ![SEL](https://github.com/user-attachments/assets/1b963fca-4101-4f93-8e1c-8c930c9dca1e)
 
