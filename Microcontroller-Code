@@ -1,0 +1,61 @@
+// ============================
+// Arduino Due PB25 Pulse Generator (1 kHz, 639 µs HIGH)
+// ============================
+
+// Constants
+# define PULSE_PIN 2 // Pin number for the pulse (PB25) on Arduino Due
+
+// Pulse parameters
+const unsigned long pulseWidthMicros = 639; // Duration of HIGH pulse in microseconds
+const unsigned long periodMicros = 1000;    // Total period of the pulse wave (1000 µs = 1 kHz frequency)
+
+void setup() {
+  // ============================
+  // CONFIGURE PB25 (PIN 2) AS OUTPUT
+  // ============================
+
+  // The SAM3X8E microcontroller (used in Arduino Due) uses direct register access for fast I/O operations.
+  // PB25 refers to "Port B, Pin 25" in the SAM3X8E microcontroller.
+  
+  // REG_PIOB_OER (Output Enable Register) enables output mode for PB25.
+  // (1 << 25) sets bit 25 of the register, configuring PB25 as an output pin.
+  REG_PIOB_OER = (1 << 25); // Enable PB25 as an output
+}
+
+void loop() {
+  // ============================
+  // GENERATE 1 kHz PULSE WAVEFORM
+  // ============================
+
+  // 1. Capture the current time (in microseconds) at the start of the loop
+  unsigned long startTime = micros(); // micros() returns the time since the Arduino started
+
+  // 2. Set PB25 HIGH to start the pulse
+  // ---------------------------------
+  // REG_PIOB_SODR (Set Output Data Register) is used to set a specific pin HIGH.
+  // (1 << 25) sets bit 25 of the register, making PB25 HIGH.
+  REG_PIOB_SODR = (1 << 25); // Set PB25 HIGH
+
+  // 3. Maintain HIGH state for the required pulse width
+  // ---------------------------------------------------
+  // The while loop ensures that the pin remains HIGH for 'pulseWidthMicros' microseconds.
+  // The condition (micros() - startTime < pulseWidthMicros) means:
+  //   - Continue looping until the difference between current time and start time reaches 'pulseWidthMicros'.
+  while (micros() - startTime < pulseWidthMicros)
+    ; // Do nothing (busy-waiting until the pulse width duration is met)
+
+  // 4. Set PB25 LOW to end the pulse
+  // --------------------------------
+  // REG_PIOB_CODR (Clear Output Data Register) is used to set a specific pin LOW.
+  // (1 << 25) clears bit 25 of the register, making PB25 LOW.
+  REG_PIOB_CODR = (1 << 25); // Set PB25 LOW
+
+  // 5. Maintain LOW state for the remaining period
+  // ----------------------------------------------
+  // The total period is 'periodMicros' microseconds.
+  // Since the pulse has already been HIGH for 'pulseWidthMicros' microseconds,
+  // the remaining LOW duration is (periodMicros - pulseWidthMicros) microseconds.
+  // The while loop ensures that the full period is completed before restarting the cycle.
+  while (micros() - startTime < periodMicros)
+    ; // Do nothing (busy-waiting until the full period duration is met)
+}
